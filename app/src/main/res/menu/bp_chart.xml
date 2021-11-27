@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/Week"/>
+    <item android:title="@string/OneMonth"/>
+    <item android:title="@string/ThreeMonth"/>
+    <item android:title="@string/SixMonth"/>
+    <item android:title="@string/Year"/>
+
+</menu>

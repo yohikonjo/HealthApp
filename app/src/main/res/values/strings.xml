@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Health App</string>
+
+    //Welcome Screen
+    <string name="heading">Stay on top of your health</string>
+    <string name="sub_heading">We help you keep track of your health so that you can focus more living your life than worrying about it.</string>
+
+    //Create Account Screen
+    <string name="create_account">Create Account</string>
+    <string name="gender">Choose Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="select_age">Select Your Age</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+
+    //Login Screen
+    <string name="Login">Login</string>
+    <string name="Login_text">Enter Username or Email</string>
+    <string name="Remember">Remember me</string>
+
+    //Forgot Password Screen
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_details">Please provide the email linked to account you would like to reset your password for!</string>
+    <string name="make_selection">Make Selection</string>
+    <string name="make_selection_details">Select method of contact with which we can reset your password</string>
+    <string name="via_SMS">via sms</string>
+    <string name="number">+923332562233</string>
+    <string name="via_mail">via mail</string>
+    <string name="mail">support@gmail.com</string>
+
+    //OTP Screen
+    <string name="otp_code_text">Co\nde</string>
+    <string name="otp_verify_code">Verify Code</string>
+    <string name="otp_verification_text">Verification</string>
+    <string name="otp_description_text">Enter one time password sent on\n</string>
+    <string name="Password_text">Enter Password</string>
+    <string name="Resend_verification_text">Resend Verification Code</string>
+
+    //Signup Screen
+    <string name="Signup">Signup</string>
+    <string name="Next">Next</string>
+    <string name="age">Age</string>
+    <string name="sex">Sex</string>
+    <string name="Height">Height</string>
+    <string name="Weight">Weight</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="pulse_rate">Pulse Rate</string>
+
+    //Home Screen
+    <string name="graph">Graph  </string>
+    <string name="stats">Stats</string>
+    <string name="analysis">Analysis</string>
+    <string name="Week">1 Week</string>
+    <string name="OneMonth">1 Month</string>
+    <string name="ThreeMonth">3 Months</string>
+    <string name="SixMonth">6 Months</string>
+    <string name="Year">1 Year</string>
+
+</resources>

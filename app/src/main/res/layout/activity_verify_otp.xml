@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".VerifyOTP"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_close_24"
+            android:padding="5dp"
+            app:tint="@color/black" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otp_code_text"
+            android:textSize="100sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/muli_black"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otp_verification_text"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/muli_black"
+            android:textAllCaps="true"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/muli_black"
+            android:text="@string/otp_description_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/number"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/muli_black"
+            android:layout_gravity="center"/>
+
+        <com.chaos.view.PinView
+            android:id="@+id/pin_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemCount="6"
+            app:itemWidth="50dp"
+            app:itemHeight="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:lineColor="@color/black"
+            android:itemBackground="@color/colorPrimary"
+            style="@style/PinWidget.PinView"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:cursorColor="@color/black"
+            app:hideLineWhenFilled="true"
+            app:itemRadius="5dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:text="@string/otp_verify_code"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:onClick="callNextScreenFromOTP"/>
+
+        <Button
+            android:id="@+id/resend_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/muli_semibold"
+            android:text="@string/Resend_verification_text"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</ScrollView>

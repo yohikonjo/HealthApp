@@ -1,4 +1,4 @@
-package com.project.healthapp;
+package com.project.healthapp.Authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +16,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.project.healthapp.R;
 
 import java.util.Calendar;
 

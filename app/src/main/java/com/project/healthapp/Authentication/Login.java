@@ -1,4 +1,4 @@
-package com.project.healthapp;
+package com.project.healthapp.Authentication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.project.healthapp.MainActivity;
+import com.project.healthapp.R;
+import com.project.healthapp.Welcome;
 
 public class Login extends AppCompatActivity {
 
@@ -34,6 +38,8 @@ public class Login extends AppCompatActivity {
     }
 
     public void Authenticate(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void callSignupScreen(View view) {

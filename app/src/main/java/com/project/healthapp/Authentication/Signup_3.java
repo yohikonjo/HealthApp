@@ -1,11 +1,10 @@
-package com.project.healthapp;
+package com.project.healthapp.Authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 import android.view.View;
@@ -18,17 +17,17 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
+import com.project.healthapp.R;
 
 public class Signup_3 extends AppCompatActivity {
 
     private static final String TAG = "Signup_3";
     private Button next_btn, login_btn;
     private ImageView back_btn;
-    private TextView title_text, data;
+    private TextView title_text;
     private ScrollView scrollView;
-    private TextInputLayout phone_number;
+    private TextInputLayout phone;
     private CountryCodePicker countryCodePicker;
-    private String phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,20 +40,23 @@ public class Signup_3 extends AppCompatActivity {
         login_btn = findViewById(R.id.signup_3_login_btn);
         title_text = findViewById(R.id.signup_3_title_text);
         scrollView = findViewById(R.id.scrollview);
-        phone_number = findViewById(R.id.PHONE);
+        phone = findViewById(R.id.PHONE);
         countryCodePicker = findViewById(R.id.country_code);
 
     }
 
     public void callNextScreen(View view) {
 
-        if (!validatePhoneNumber()){
-            Toast.makeText(this, phone, Toast.LENGTH_SHORT);
+        if(!validatePhoneNumber()){
             return;
         }
 
-        phone = phone_number.getEditText().getText().toString().trim();
-        String number = "+" + countryCodePicker.getSelectedCountryCode() + phone;
+        String get_number = phone.getEditText().getText().toString().trim();
+        String number = "+"+countryCodePicker.getSelectedCountryCode()+get_number;
+        Log.d(TAG, "The number that keeps saying null " + number);
+
+
+
         Intent signup_3_intent = new Intent(this, VerifyOTP.class);
 
         Bundle bundle = getIntent().getExtras();
@@ -89,7 +91,7 @@ public class Signup_3 extends AppCompatActivity {
         }
         else{
             Log.d(TAG, "Bundle is null");
-            Toast.makeText(this, number, Toast.LENGTH_SHORT);
+            Toast.makeText(this, get_number, Toast.LENGTH_SHORT);
         }
 
                 Pair[] pairs = new Pair[4];
@@ -106,12 +108,21 @@ public class Signup_3 extends AppCompatActivity {
                 }
     }
 
-    private boolean validatePhoneNumber(){
-        if (countryCodePicker.isValidFullNumber()){
-            Toast.makeText(this, "Entered number is invalid", Toast.LENGTH_SHORT).show();
+    private boolean validatePhoneNumber() {
+        String val = phone.getEditText().getText().toString().trim();
+        Log.d(TAG, "validating "+val);
+        String check_spaces = "[0-9]+";
+
+        if (val.isEmpty()) {
+            phone.setError("Enter valid phone number");
+            return false;
+        }
+        else if (!val.matches(check_spaces)) {
+            phone.setError("Enter only numerical digits");
             return false;
         }
         else {
+            phone.setError(null);
             return true;
         }
     }

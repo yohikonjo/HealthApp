@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey">
@@ -57,8 +57,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
-            android:layout_below="@+id/display_bar">
+            android:layout_below="@+id/display_bar"
+            android:layout_marginTop="40dp">
 
             <RelativeLayout
                 android:id="@+id/blood_pressure"
@@ -72,37 +72,37 @@
                     android:id="@+id/blood_drop"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_blood_drop_24"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="25dp"
-                    android:layout_marginLeft="30dp"/>
+                    android:src="@drawable/ic_blood_drop_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/blood_pressure"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@+id/blood_drop"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/blood_drop"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:src="@drawable/ic_two_dots_24"
-                    android:layout_toRightOf="@+id/blood_drop"
+                    android:layout_marginLeft="280dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="280dp"/>
+                    android:layout_toRightOf="@+id/blood_drop"
+                    android:src="@drawable/ic_two_dots_24" />
 
                 <RelativeLayout
                     android:id="@+id/bp_filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_drop_down_menu"
                     android:layout_below="@+id/blood_drop"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="60dp">
+                    android:background="@drawable/rounded_drop_down_menu">
 
                     <TextView
                         android:id="@+id/bp_selection"
@@ -112,14 +112,14 @@
                         android:gravity="center_vertical"
                         android:text="  3 M"
                         android:textColor="@color/black"
-                        android:textSize="11dp"/>
+                        android:textSize="11dp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_down_24"
-                        android:layout_toRightOf="@+id/selection"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/bp_selection"
+                        android:src="@drawable/ic_arrow_down_24" />
 
                 </RelativeLayout>
 
@@ -128,54 +128,54 @@
                     android:layout_width="365dp"
                     android:layout_height="260dp"
                     android:layout_below="@id/bp_filter"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="415dp"
                 android:layout_height="400dp"
+                android:layout_below="@+id/blood_pressure"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/rounded_background"
-                android:layout_below="@+id/blood_pressure">
+                android:background="@drawable/rounded_background">
 
                 <ImageView
                     android:id="@+id/heart"
                     android:layout_width="40dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_heart_ekg"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:src="@drawable/ic_heart_ekg" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/pulse_rate"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@+id/heart"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/heart"
+                    android:text="@string/pulse_rate"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:src="@drawable/ic_two_dots_24"
-                    android:layout_toRightOf="@+id/heart"
+                    android:layout_marginLeft="280dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="280dp"/>
+                    android:layout_toRightOf="@+id/heart"
+                    android:src="@drawable/ic_two_dots_24" />
 
                 <RelativeLayout
                     android:id="@+id/pr_filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_drop_down_menu"
                     android:layout_below="@+id/heart"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="60dp">
+                    android:background="@drawable/rounded_drop_down_menu">
 
                     <TextView
                         android:id="@+id/pr_selection"
@@ -185,14 +185,14 @@
                         android:gravity="center_vertical"
                         android:text="  3 M"
                         android:textColor="@color/black"
-                        android:textSize="11dp"/>
+                        android:textSize="11dp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_down_24"
+                        android:layout_marginTop="5dp"
                         android:layout_toRightOf="@+id/pr_selection"
-                        android:layout_marginTop="5dp"/>
+                        android:src="@drawable/ic_arrow_down_24" />
 
                 </RelativeLayout>
 
@@ -201,8 +201,8 @@
                     android:layout_width="365dp"
                     android:layout_height="260dp"
                     android:layout_below="@id/pr_filter"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
 
             </RelativeLayout>
 
@@ -210,4 +210,4 @@
 
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

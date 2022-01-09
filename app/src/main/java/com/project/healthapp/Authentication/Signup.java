@@ -1,4 +1,4 @@
-package com.project.healthapp;
+package com.project.healthapp.Authentication;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.project.healthapp.R;
 
 public class Signup extends AppCompatActivity {
 

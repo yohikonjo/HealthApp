@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ecg_top"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ecg_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="30dp"
+                app:srcCompat="@drawable/ic_arrow_back_24"
+                android:transitionName="transition_back_btn"/>
+
+            <ImageView
+                android:id="@+id/ecg_options"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="240dp"
+                android:src="@drawable/ic_two_dots_24" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/ecg_options"
+                android:src="@drawable/ic_info_24" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ECG"
+            android:layout_below="@+id/ecg_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:padding="5dp"
+            android:text="@string/ecg"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_1"
+            android:layout_width="415dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/ECG"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/date_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/date_1"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/date_1"
+                android:text="@string/time_1"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/sinus_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sinus"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thythm_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sinus_1"
+                android:layout_marginLeft="15dp"
+                android:text="@string/thythm"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="268dp"
+                android:layout_marginTop="40dp"
+                android:background="#808080" />
+
+            <TextView
+                android:id="@+id/current_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/line_1"
+                android:text="@string/current_1"
+                android:textColor="@color/red"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/current_1"
+                android:text="@string/bpm"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_1"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/line_1"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/sys_line_view_1"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/status_1"
+                android:layout_marginLeft="15dp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/download_button"
+                android:src="@drawable/ic_download_24"
+                android:padding="17dp"
+                android:layout_toRightOf="@id/sys_line_view_1"
+                android:layout_below="@+id/status_1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_2"
+            android:layout_width="415dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/blood_pressure_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/date_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/date_2"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/date_2"
+                android:text="@string/time_2"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/sinus_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sinus"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thythm_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sinus_2"
+                android:layout_marginLeft="15dp"
+                android:text="@string/thythm"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/line_2"
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="268dp"
+                android:layout_marginTop="40dp"
+                android:background="#808080" />
+
+            <TextView
+                android:id="@+id/current_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/line_2"
+                android:text="@string/current_2"
+                android:textColor="@color/red"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/current_2"
+                android:text="@string/bpm"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_2"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/line_2"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/sys_line_view_2"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/status_2"
+                android:layout_marginLeft="15dp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/download_button"
+                android:src="@drawable/ic_download_24"
+                android:padding="17dp"
+                android:layout_toRightOf="@id/sys_line_view_2"
+                android:layout_below="@+id/status_2"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_3"
+            android:layout_width="415dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/blood_pressure_2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/date_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/date_3"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/date_3"
+                android:text="@string/time_3"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/sinus_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sinus"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thythm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sinus_3"
+                android:layout_marginLeft="15dp"
+                android:text="@string/thythm"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/line_3"
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="268dp"
+                android:layout_marginTop="40dp"
+                android:background="#808080" />
+
+            <TextView
+                android:id="@+id/current_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/line_3"
+                android:text="@string/current_3"
+                android:textColor="@color/red"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/current_3"
+                android:text="@string/bpm"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_3"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/line_3"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/sys_line_view_3"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/status_3"
+                android:layout_marginLeft="15dp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/download_button"
+                android:src="@drawable/ic_download_24"
+                android:padding="17dp"
+                android:layout_toRightOf="@id/sys_line_view_3"
+                android:layout_below="@+id/status_3"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blood_pressure_3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/more"
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blood_pressure_3"
+            android:layout_toRightOf="@id/more"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/ic_arrow_down_24"/>
+    </RelativeLayout>
+</ScrollView>

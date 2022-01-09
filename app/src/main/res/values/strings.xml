@@ -61,4 +61,20 @@
     <string name="SixMonth">6 Months</string>
     <string name="Year">1 Year</string>
 
+    //ECG Screen
+    <string name="ecg">ECG DATA</string>
+    <string name="date_1">Sat,16 Nov </string>
+    <string name="time_1">7:35 pm</string>
+    <string name="sinus">Sinus</string>
+    <string name="thythm">Thythm</string>
+    <string name="status">Average</string>
+    <string name="current_1">88</string>
+    <string name="date_2">Fri,15 Nov </string>
+    <string name="time_2">7:44 pm</string>
+    <string name="current_2">89</string>
+    <string name="date_3">Thu,14 Nov </string>
+    <string name="time_3">7:52 pm</string>
+    <string name="current_3">89</string>
+    <string name="bpm">BPM</string>
+    <string name="more">more</string>
 </resources>
